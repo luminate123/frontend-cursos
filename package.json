@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node -e \"const fs=require('fs'),p='.next/standalone/.next/server/pages-manifest.json';if(!fs.existsSync(p)){fs.mkdirSync(require('path').dirname(p),{recursive:true});fs.writeFileSync(p,'{}');}\"",
+    "postbuild": "node scripts/fix-standalone.js",
     "cf-build": "opennextjs-cloudflare build",
     "start": "next start",
     "lint": "next lint",
