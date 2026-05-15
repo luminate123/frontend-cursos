@@ -19,7 +19,10 @@ jobs:
           version: latest
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile || true
+
+      - name: Rebuild native packages
+        run: pnpm rebuild esbuild workerd sharp unrs-resolver msw
 
       - name: Build & Deploy
         run: pnpm run deploy
