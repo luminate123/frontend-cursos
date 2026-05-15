@@ -9,3 +9,7 @@ dist/
 .env.*.local
 *.log
 *.tsbuildinfo
+
+# Cloudflare / opennext build artifacts
+.open-next/
+.dev.vars
