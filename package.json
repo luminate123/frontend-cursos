@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node -e \"const fs=require('fs'),p='.next/standalone/.next/server/pages-manifest.json';if(!fs.existsSync(p)){fs.mkdirSync(require('path').dirname(p),{recursive:true});fs.writeFileSync(p,'{}');}\"",
     "cf-build": "opennextjs-cloudflare build",
     "start": "next start",
     "lint": "next lint",
@@ -21,7 +22,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^1.14.0",
-    "next": "^15.3.0",
+    "next": "16.2.6",
     "next-themes": "^0.4.6",
     "react": "^19.1.7",
     "react-dom": "^19.1.7",
@@ -49,7 +50,7 @@
     "@types/react": "^19.1.7",
     "@types/react-dom": "^19.1.7",
     "eslint": "^9",
-    "eslint-config-next": "^15.3.0",
+    "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
     "typescript": "^5.7.4",
     "wrangler": "^4.91.0"
