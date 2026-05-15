@@ -16,13 +16,10 @@ jobs:
 
       - uses: pnpm/action-setup@v4
         with:
-          version: latest
+          version: 9
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile || true
-
-      - name: Rebuild native packages
-        run: pnpm rebuild esbuild workerd sharp unrs-resolver msw
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build & Deploy
         run: pnpm run deploy
