@@ -32,6 +32,15 @@
     "zod": "^4.4.3",
     "zustand": "^5.0.13"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "msw",
+      "sharp",
+      "unrs-resolver",
+      "workerd"
+    ]
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
